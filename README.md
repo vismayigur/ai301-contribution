@@ -1,15 +1,17 @@
-# Contribution [#]: [Issue Title]
+# Contribution 1: Boolean query parameter capitalization
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** 1 
+**Student:** Vismay Igur  
+**Issue:** https://github.com/OpenAPITools/openapi-generator/issues/1260 
+**Status:** Phase I Complete
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+I chose this issue because it is a clear, practical bug that connects directly to how real APIs and generated client libraries behave. At first, boolean capitalization might seem like a small detail, but this issue shows how a tiny formatting difference like "False" instead of "false" can completely change the meaning of a request when an API treats query parameters as case-sensitive. I thought this was interesting because it highlights the importance of writing code that follows specifications and works reliably across different systems.
+
+This issue also matches my skills and learning goals because I have experience working with backend logic, APIs, and debugging edge cases, and I want to get more comfortable contributing to larger open-source codebases. Since it is labeled as a good first issue and relates to Python client generation, it feels like a manageable way to learn about handling parameter serialization. By working on it, I hope to better understand how generated API clients are built, how open-source projects organize fixes and tests, and how to make a small but meaningful contribution that improves compatibility for developers using case-sensitive APIs.
 
 ---
 
