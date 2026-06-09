@@ -2,16 +2,16 @@
 
 **Contribution Number:** 1 
 **Student:** Vismay Igur  
-**Issue:** https://github.com/OpenAPITools/openapi-generator/issues/1260 
+**Issue:** https://github.com/wso2/product-is/issues/21325
 **Status:** Phase I Complete
 
 ---
 
 ## Why I Chose This Issue
 
-I chose this issue because it is a clear, practical bug that connects directly to how real APIs and generated client libraries behave. At first, boolean capitalization might seem like a small detail, but this issue shows how a tiny formatting difference like "False" instead of "false" can completely change the meaning of a request when an API treats query parameters as case-sensitive. I thought this was interesting because it highlights the importance of writing code that follows specifications and works reliably across different systems.
+I chose this issue because it focuses on a real UX problem where a small design flaw can cause users to make mistakes, like accidentally adding a user to the wrong user store. I thought this was interesting because the issue is not just about fixing a bug, but about improving the user experience so the application behaves more intuitively. Since user creation and identity management are important parts of many applications, making this flow clearer and safer feels like a meaningful contribution.
 
-This issue also matches my skills and learning goals because I have experience working with backend logic, APIs, and debugging edge cases, and I want to get more comfortable contributing to larger open-source codebases. Since it is labeled as a good first issue and relates to Python client generation, it feels like a manageable way to learn about handling parameter serialization. By working on it, I hope to better understand how generated API clients are built, how open-source projects organize fixes and tests, and how to make a small but meaningful contribution that improves compatibility for developers using case-sensitive APIs.
+This issue also matches my skills and learning goals because it involves frontend/UI work, user flows, and understanding how application state or context should be handled when creating a user. I want to improve my ability to work in a larger open-source codebase and learn how production applications organize frontend logic around forms, modals, and user management features. By contributing to this issue, I hope to gain more experience with fixing UX problems, reading existing code, and making a change that helps prevent real users from making avoidable mistakes.
 
 ---
 
