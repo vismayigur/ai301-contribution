@@ -1,4 +1,4 @@
-# Contribution 1: Boolean query parameter capitalization
+# Contribution 1: Improve the UX of user creation for secondary user stores from the console app.
 
 **Contribution Number:** 1 
 **Student:** Vismay Igur  
