@@ -77,13 +77,11 @@ The way I'm planning on approaching this is to update the add-user flow so that 
 
 ### Implementation Plan
 
-Using UMPIRE framework (adapted):
-
 **Understand:** 
-When an admin creates a user while working in a secondary user store context, the UI does not fully preserve that context. Even if the add-user flow opens with the correct secondary store selected, after the user is created the users page resets back to the Primary user store instead of staying on the previously selected secondary store.
+When an admin creates a user while working in a secondary user store context, the UI does not fully preserve that context. Even if the add-user flow opens with the correct secondary store selected, after the user is created the users page resets back to the Primary user store.
 
 **Match:** 
-A similar pattern likely already exists elsewhere in the Console where filter state or selected tab state is preserved through navigation using URL parameters or route state. I will look for an existing feature in identity-apps that keeps current list context after a create/edit action and reuse that same approach instead of introducing a new state pattern.
+A similar pattern likely already exists elsewhere in the Console where filter state or selected tab state is preserved through navigation using URL parameters or route state. I'll look for an existing feature and investigate.
 
 **Plan:** [Step-by-step implementation plan]
 1. Locate the users list component and identify where the selected user-store filter is stored.
@@ -94,10 +92,10 @@ A similar pattern likely already exists elsewhere in the Console where filter st
 6. Add or update tests to cover secondary-store context preservation.
 
 **Implement:** 
-Implementation will be done in the identity-apps frontend codebase on a dedicated branch. I will keep the fix scoped only to preserving user-store context after user creation and will not mix in the separate secondary-store validation issue.
+Implementation will be done in the identity-apps frontend codebase on a dedicated branch. 
 
 **Review:** 
-Before submitting, I will review the project’s contribution guidelines and ensure the change is scoped, documented clearly, and does not include unrelated fixes. I will also make sure the commit and PR description clearly state that this fixes the remaining user-store context reset after add-user completion.
+Before submitting, I will review the project’s contribution guidelines and ensure the change is scoped, documented clearly, and does not include unrelated fixes.
 
 **Evaluate:** 
 The fix is successful if:
