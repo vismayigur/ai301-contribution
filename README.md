@@ -111,26 +111,30 @@ The fix is successful if:
 
 ### Unit Tests
 
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
+- Test case 1: Verify the users page user store dropdown renders the currently selected selectedUserStore value instead of always defaulting.
+- Test case 2: Verify changing the user store dropdown updates selectedUserStore.
+- Test case 3: Verify when selectedUserStore is null, the default is still stored.
 
 ### Integration Tests
 
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
+- Integration scenario 1: From the users page, select a writable secondary user store, open the Add User wizard, create a user, and verify the users page still shows the same secondary user store.
+- Integration scenario 2: Select the primary user store, create a user, and verify the dropdown still remains on the primary user store after completion.
 
 ### Manual Testing
 
-[What you tested manually and results]
+- Updated the users page user store selector to be controlled by the page state instead of using a static default value.
+- Manual verification is still pending in a fully running local environment because local Node/pnpm setup was not yet.
 
 ---
 
 ## Implementation Notes
 
-### Week [X] Progress
+### Week 1 Progress
 
-[What you built this week, challenges faced, decisions made]
+- Traced the post-create user store reset in the users flow.
+- Found the users page dropdown was using a fixed defaultValue instead of the current selectedUserStore state.
+- Updated the dropdown to be controlled so it keeps the active user store selection visible after the add-user flow.
+- Manual runtime verification is still pending.
 
 ### Week [Y] Progress
 
@@ -138,9 +142,9 @@ The fix is successful if:
 
 ### Code Changes
 
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+- Files modified: features/admin.users.v1/pages/users.tsx
+- Key commits: Add the commit hash/link for the controlled dropdown fix once pushed
+- Approach decisions: Used a controlled component approach because the selected user store was already maintained in React state. This keeps the UI aligned with the actual page state.
 
 ---
 
