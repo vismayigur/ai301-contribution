@@ -148,6 +148,9 @@ The fix is successful if:
 
 ---
 
+### Branch Link
+https://github.com/vismayigur/identity-apps/tree/fix-issue-1
+
 ## Pull Request
 
 **PR Link:** [GitHub PR URL when submitted]
