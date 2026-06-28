@@ -3,7 +3,7 @@
 **Contribution Number:** 1 
 **Student:** Vismay Igur  
 **Issue:** https://github.com/wso2/product-is/issues/21325
-**Status:** Phase III In Progress
+**Status:** Phase IV Completed
 
 ---
 
@@ -136,9 +136,11 @@ The fix is successful if:
 - Updated the dropdown to be controlled so it keeps the active user store selection visible after the add-user flow.
 - Manual runtime verification is still pending.
 
-### Week [Y] Progress
+### Week [2] Progress
+- Confirmed solution works and issue is fixed.
+- Created PR and submitted.
+- Awaiting reviewer feedback.
 
-[Continue documenting as you work]
 
 ### Code Changes
 
@@ -153,36 +155,37 @@ https://github.com/vismayigur/identity-apps/tree/fix-issue-1
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when submitted]
+**PR Link:** 
+https://github.com/wso2/identity-apps/pull/10479
 
 **PR Description:** [Draft or final PR description - much of the content above can be adapted]
+
+ Fixes the users page user store selector so it preserves the currently selected user store context after the add-user flow. Previously, when creating a user from a secondary user store context, the selector could visually fall back to the primary user store because it used a static default value. This change binds the dropdown to the current selectedUserStore state so the UI remains aligned with the active user store context.
 
 **Maintainer Feedback:**
 - [Date]: [Summary of feedback received]
 - [Date]: [How you addressed it]
 
 **Status:** [Awaiting review / Iterating / Approved / Merged]
-
+Awaiting Review
 ---
 
 ## Learnings & Reflections
 
 ### Technical Skills Gained
-
-[What you learned technically]
+Traced state flow in a React feature module across the users page and add-user wizard, and reinforced the difference between uncontrolled inputs using `defaultValue` and controlled inputs using state-driven `value`. 
 
 ### Challenges Overcome
+The main challenge was identifying whether the selected user store was actually being reset in state or only appearing to reset in the UI. I worked through the users page and wizard flow and narrowed the issue down to the page-level dropdown using a fixed default value instead of reflecting the current `selectedUserStore`.
 
-[What was hard and how you solved it]
 
 ### What I'd Do Differently Next Time
 
-[Reflection on your process]
+I would verify the runtime behavior earlier in a fully working local environment so I could separate UI-state issues from navigation/remount behavior sooner. I would also consider persistence across navigation up front if the selected context is expected to survive route changes.
 
 ---
 
 ## Resources Used
 
-- [Link to helpful documentation]
-- [Tutorial or Stack Overflow post that helped]
-- [GitHub issues or discussions that helped]
+- Identity Apps repo / FAQ
+- Documentation
